@@ -25,3 +25,6 @@ images:
 - name: hovietvinh29032004/backend
   newName: hovietvinh29032004/backend
   newTag: d803d2e0b090fe531f75dc06dd9dd60082d4b85a
+- name: hovietvinh29032004/frontend
+  newName: hovietvinh29032004/frontend
+  newTag: d803d2e0b090fe531f75dc06dd9dd60082d4b85a
