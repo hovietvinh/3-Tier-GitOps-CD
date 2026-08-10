@@ -1,0 +1,23 @@
+controller:
+  ingressClassResource:
+    name: nginx
+    enabled: true
+    default: false
+
+  service:
+    type: ClusterIP
+
+  config:
+    proxy-read-timeout: "600"
+    proxy-send-timeout: "600"
+    proxy-body-size: "50m"
+  healthzPort: 80
+  healthCheckPath: /healthz
+
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 250m
+      memory: 256Mi

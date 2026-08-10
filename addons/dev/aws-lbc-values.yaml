@@ -1,0 +1,14 @@
+clusterName: gitops_cicd_3_tiers-dev-eks-cluster
+region: ap-southeast-1
+vpcId:
+serviceAccount:
+  create: false
+  name: aws-load-balancer-controller
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 200m
+    memory: 256Mi
+replicaCount: 2

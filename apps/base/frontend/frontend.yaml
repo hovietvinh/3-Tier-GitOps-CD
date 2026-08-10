@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-deployment
-  namespace: dev
   labels: 
     app: frontend-deployment
 spec:
@@ -17,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: nginx-latest
+          image: hovietvinh29032004/frontend:latest
           ports:
             - containerPort: 8080
 ---
