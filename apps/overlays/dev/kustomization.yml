@@ -1,23 +1,27 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-resources:
-  - ../../base/ingress/alb
-  - ../../base/ingress/nginx
 
-  - ../../base/mysql
-  - ../../base/backend
-  - ../../base/frontend
+resources:
+- ../../base/ingress/alb
+- ../../base/ingress/nginx
+- ../../base/mysql
+- ../../base/backend
+- ../../base/frontend
   
 patches:
-  - target:
-      group: elbv2.k8s.aws
-      version: v1beta1
-      kind: IngressClassParams
-      name: alb
-    patch: |-
-      - op: replace
-        path: /spec/subnets/ids
-        value:
-          -
-          -
+- patch: |-
+    - op: replace
+      path: /spec/subnets/ids
+      value:
+        -
+        -
+  target:
+    group: elbv2.k8s.aws
+    kind: IngressClassParams
+    name: alb
+    version: v1beta1
+images:
+- name: hovietvinh29032004/backend
+  newName: hovietvinh29032004/backend
+  newTag: d803d2e0b090fe531f75dc06dd9dd60082d4b85a
