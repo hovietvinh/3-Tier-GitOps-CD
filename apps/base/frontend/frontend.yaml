@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-deployment
-  labels: 
+  labels:
     app: frontend-deployment
 spec:
   replicas: 2
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: hovietvinh29032004/frontend:latest
+          image: hovietvinh29032004/frontend:b98a8b6e7c738f23e306c79effeae935b346bf3e
           ports:
             - containerPort: 8080
 ---
@@ -31,4 +31,3 @@ spec:
   ports:
     - port: 80
       targetPort: 8080
-

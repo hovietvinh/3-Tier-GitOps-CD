@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
         - name: backend
-          image: hovietvinh29032004/backend:latest
+          image: hovietvinh29032004/backend:89d54202db3f3519194f88049be3db3cd9a71893
           ports:
-          - containerPort: 5000
+            - containerPort: 5000
           env:
             - name: DB_HOST
               value: mysql
