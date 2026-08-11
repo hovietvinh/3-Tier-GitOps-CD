@@ -14,8 +14,8 @@ patches:
     - op: replace
       path: /spec/subnets/ids
       value:
-        -
-        -
+        - subnet-06069cd72b82d71b7
+        - subnet-0b9255ec57dd53172
   target:
     group: elbv2.k8s.aws
     kind: IngressClassParams
