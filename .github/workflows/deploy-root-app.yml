@@ -1,4 +1,4 @@
-name: Deploy Solar Engine
+name: Deploy root app
 
 on:
   workflow_dispatch:
