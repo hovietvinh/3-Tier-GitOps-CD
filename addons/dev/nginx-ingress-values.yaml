@@ -11,7 +11,6 @@ controller:
     proxy-read-timeout: "600"
     proxy-send-timeout: "600"
     proxy-body-size: "50m"
-  healthzPort: 80
   healthCheckPath: /healthz
 
   resources:
