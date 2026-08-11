@@ -1,6 +1,6 @@
 clusterName: gitops_cicd_3_tiers-dev-eks-cluster
 region: ap-southeast-1
-vpcId:
+vpcId: vpc-0a37b74a2e2b80fda
 serviceAccount:
   create: false
   name: aws-load-balancer-controller
