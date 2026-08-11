@@ -20,8 +20,9 @@ jobs:
     permissions:
       id-token: write
       contents: read
+    environment: ${{ github.event.inputs.environment || 'dev' }}
     env:
-      DEPLOY_ENV: ${{ inputs.environment }}
+      DEPLOY_ENV: ${{ github.event.inputs.environment || 'dev' }}
       AWS_REGION: ${{ vars.AWS_REGION }}
       EKS_CLUSTER_NAME: ${{ vars.EKS_CLUSTER_NAME }}
       AWS_GITHUB_ACTIONS_ROLE_ARN: ${{ secrets.AWS_GITHUB_ACTIONS_ROLE_ARN }}
